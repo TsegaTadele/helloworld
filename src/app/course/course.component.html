@@ -1,0 +1,19 @@
+<p>
+  course works!
+</p>
+<div (click)="divClicked()">
+  <input type="text" [(ngModel)]="email" />
+  <ul>
+    <li>title : {{ course.title | uppercase }}</li>
+    <li>rating: {{ course.rating | number: "1.2-2" }}</li>
+    <li>No Employee :{{ course.employes | number }}</li>
+    <li>price : {{ course.price | currency: "BIR" }}</li>
+    <li>startDate : {{ course.startDate | date: "shortDate" }}</li>
+  </ul>
+  <button
+    (click)="onSave($event)"
+    [style.backgroundColor]="isActive ? 'blue' : 'red'"
+  >
+    Save
+  </button>
+</div>
